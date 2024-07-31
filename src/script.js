@@ -60,7 +60,7 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
         saveCityToLocalStorage(cityName);
         updateCityDropdown();
     }).catch(() => {
-        alert("An error occurred while fetching the weather forecast!");
+        alert("Not Find the Location Pleas make Vaild City Name!!");
     });
 }
 
@@ -70,11 +70,11 @@ const getCityCoordinates = () => {
     const API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
     
     fetch(API_URL).then(response => response.json()).then(data => {
-        if (!data.length) return alert(`No coordinates found for ${cityName}`);
+        if (!data.length) return alert(`No City found for ${cityName}`);
         const { lat, lon, name } = data[0];
         getWeatherDetails(name, lat, lon);
     }).catch(() => {
-        alert("An error occurred while fetching the coordinates!");
+        alert("Not Find the Location Pleas make Vaild City Name!!");
     });
 }
 
@@ -87,7 +87,7 @@ const getUserCoordinates = () => {
                 const { name } = data[0];
                 getWeatherDetails(name, latitude, longitude);
             }).catch(() => {
-                alert("An error occurred while fetching the city name!");
+                alert("An error fetching the city name!");
             });
         },
         error => {
@@ -126,11 +126,11 @@ cityDropdown.addEventListener('change', (e) => {
     const API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
     
     fetch(API_URL).then(response => response.json()).then(data => {
-        if (!data.length) return alert(`No coordinates found for ${cityName}`);
+        if (!data.length) return alert(`No City found for ${cityName}`);
         const { lat, lon } = data[0];
         getWeatherDetails(cityName, lat, lon);
     }).catch(() => {
-        alert("An error occurred while fetching the coordinates!");
+        alert("Dropdown Location is Not Found!!");
     });
 });
 
