@@ -2,37 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Weather App Project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <title>Weather App Project JavaScript | CodingNepal</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href='./output.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
 </head>
-<body class="bg-cover bg-no-repeat">
-    <div class="flex gap-9 p-8">
-        <div class="weather-input p-5">
+<body>
+    <div class="container">
+        <div class="weather-input">
             <h3>Enter a City Name</h3>
-            <input class="w-full my-4" type="text" placeholder="E.g., Ahmedabad , surat , Delhi">
-            <button class="w-full py-2 my-2">Search</button>
-            <button class="w-full py-2 my-2">Use Current Location</button>
-            <select class="w-full py-2 my-2 city-dropdown">
+            <input class="city-input" type="text" placeholder="E.g., Ahmedabad , surat , Delhi">
+            <button class="search-btn">Search</button>
+            <button class="location-btn">Use Current Location</button>
+            
+            <!-- Dropdown for recently searched cities -->
+            <select class="city-dropdown">
                 <option value="" disabled selected>Last Select City</option>
             </select>
         </div>
         
-        <div class="weather-data w-full">
-            <div class="current-weather p-5">
-                <div>
-                    <h2></h2>
+        <div class="weather-data">
+            <div class="current-weather">
+                <div class="details">
+                    <h2>( )</h2>
                     <h6>Temperature: °C</h6>
-                    <h6>Wind: M/S</h6>
+                    <h6>Wind:  M/S</h6>
                     <h6>Humidity: %</h6>
                 </div>
             </div>
-            <div class="days-forecast mt-5">
+            <div class="days-forecast">
                 <h2>5-Day Forecast</h2>
-                <ul class="weather-cards flex gap-5">
+                <ul class="weather-cards">
                     <li class="card">
                         <h3>(  )</h3>
                         <h6>Temp: C</h6>  
