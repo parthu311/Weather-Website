@@ -1,4 +1,6 @@
 ![alt text]({C872E530-C681-4615-AE55-A73297890904}.png)
+
+
 Here's the documentation for your Weather App project:
 
 ---
